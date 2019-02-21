@@ -1,0 +1,33 @@
+{	
+	"dir" : {
+		"css": "css/",
+		"js": "js/",
+		"html": "html/",
+		"model": "modelo/",
+		"view": "vista/",
+		"controller": "controlador/",
+		"fonts": "fonts/",
+		"img": "img/"
+	},
+	"js": [
+		"jquery.min.js",
+		"jquery.dataTables.min.js",
+		"bootstrap.min.js",
+		"bootstrap-notify.min.js",
+		"netLib.js",
+		"mainLogin.js"
+	],
+	"css": [
+		"normalize.min.css",
+		"netInit.min.css",
+		"fonts.css",
+		"bootstrap.min.css"
+	],
+	"frameworks":[
+		"bootstrap",
+		"animate",
+		"normalize",
+		"jquery"
+	],
+	"controlerName": "process.php"
+}
