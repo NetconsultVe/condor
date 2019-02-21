@@ -16,6 +16,17 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name', 'email', 'password',
+        'confirmation_code',
+        'cod_ubch',
+        'cod_mp',
+        'cod_pq',
+        'cod_comun',
+        'cod_manzana',
+        'cod_familia',
+        'validaEmail',
+        'validaSms',
+        'activo',
+        'foto',
     ];
 
     /**

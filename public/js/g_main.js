@@ -10,13 +10,13 @@ function g_CargarCombo(
 ) {
 
     var str_opcion =
-        "<option value=”” disabled selected>Seleccione una Opción</option>";
+        "<option value=”” disabled selected>SELECCIONE UN OPCIÓN</option>";
     var el__texo = "";
     var el__id = "";
     var ejecuraCombo = "";
     $.ajax({
         url: site + laruta,
-        headers: { "X-CSRF-TOKEN": $("#token").val() },
+        headers: { "X-CSRF-TOKEN": getToken()},
         type: elmetodo,
         dataType: "json",
         success: function (data) {

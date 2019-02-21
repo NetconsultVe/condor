@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
@@ -20,16 +20,19 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/comunidad','ComunidadesControler@index');
 // Rutas Contenidad CNE
-route::get('get_geomp','cne_controler@GetMunicipios');
-Route::get('get_geopq/{id}','cne_controler@GetParroquias');
+route::post('get_geomp','cne_controler@GetMunicipios');
+Route::post('get_geopq/{id}','cne_controler@GetParroquias');
 
 //Fin de la Rutas
 
 //Ruras contenidas Psuv
-Route::get('get_listUbch/{mp}/{pq}','psuv_controler@get_listUbch');
+Route::post('get_listUbch/{mp}/{pq}','psuv_controler@get_listUbch');
 Route::get('get_SearchUbch/{id}','psuv_controler@get_SearchUbch');
 Route::get('ubch','psuv_controler@index');
-
+Route::get('dashboard','dashboardController@index');
+Route::get('comunidad','comunidadController@index');
+Route::get('manzana','manzanaController@index');
+Route::post('addUser','AutoUsuarioController@addUser');
 
 //Rutas RegCdno
 Route::get('getRegCdno/{id}','RegCdnoControler@getRegCdno');
